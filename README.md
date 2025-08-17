@@ -1,2 +1,1 @@
-# backendCursos
-pagina de cursos, gestion de usuarios
+# Curso de programacion , creado por randis graterol
