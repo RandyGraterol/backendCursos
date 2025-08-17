@@ -4,7 +4,7 @@ import { UserModuleProgress } from './progress.model.js';
 import {Task} from './task.model.js';
 // Exportar modelos individuales
 export { User, Module, UserModuleProgress,Task};
-{/*###############################################################################################*/}
+{/*##############################################################################################*/}
 // Configuración de relaciones
 export function setupRelations() {
   // Relación muchos-a-muchos entre User y Module
