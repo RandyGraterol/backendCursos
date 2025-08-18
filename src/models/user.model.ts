@@ -29,7 +29,7 @@ export class User extends Model<UserAttributes> {
     autoIncrement: true,
   })
   declare id: number;
-
+  
   @Column({
     type: DataType.STRING(100),
     allowNull: false,
@@ -38,6 +38,13 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare name: string;
+  
+  @Column({
+    type: DataType.STRING(255),
+    allowNull:true,
+    defaultValue: 'sin imagen',
+  })
+  declare perfileImage: string; // URL o path de la imagen de perfil
 
   @Column({
     type: DataType.STRING(20),
@@ -48,7 +55,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare cedula: string;
-
+  
   @Column({
     type: DataType.STRING(100),
     allowNull: false,
@@ -59,7 +66,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare email: string;
-
+  
   @Column({
     type: DataType.STRING(10),
     allowNull: false,
@@ -68,7 +75,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare semester: string;
-
+  
   @Column({
     type: DataType.STRING,
     allowNull: false,
@@ -78,7 +85,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare password: string;
-
+  
   @Column({
     type: DataType.STRING(50),
     allowNull: false,
@@ -88,7 +95,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare preference: string;
-
+  
   @Column({
     type: DataType.STRING(50),
     allowNull: false,
@@ -98,7 +105,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare jsExperience: string;
-
+  
   @Column({
     type: DataType.TEXT,
     allowNull: false,
@@ -107,7 +114,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare jsProjects: string;
-
+  
   @Column({
     type: DataType.STRING(50),
     allowNull: false,
@@ -117,7 +124,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare jsFrameworks: string;
-
+  
   @Column({
     type: DataType.TEXT,
     allowNull: false,
@@ -126,7 +133,7 @@ export class User extends Model<UserAttributes> {
     },
   })
   declare learningGoals: string;
-
+  
   @Column({
     type: DataType.BOOLEAN,
     allowNull: false,
@@ -134,7 +141,7 @@ export class User extends Model<UserAttributes> {
     field: 'is_active',
   })
   declare isActive: boolean;
-
+  
   @Column({
     type: DataType.STRING(20),
     allowNull: false,
